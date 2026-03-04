@@ -74,4 +74,4 @@ distube.on('addList', (queue, playlist) =>
   queue.textChannel.send(`Pridėjau grojaraštį **${playlist.name}** (${playlist.songs.length} dainų). Turėsim ką veikti!`)
 );
 
-client.login('TAVO_BOTO_TOKENAS'); // ČIA ĮRAŠYK SAVO TOKENĄ!
+client.login('PROCESS.env.BOT_TOKEN');

@@ -7,7 +7,7 @@ app.get('/', (req, res) => res.send('Botas gyvas!'));
 app.listen(process.env.PORT || 3000);
 
 // Boto smegenys
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 client.once('ready', () => {
     console.log('ShadowWolf išlindo iš miško!');

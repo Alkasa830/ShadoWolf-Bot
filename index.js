@@ -12,5 +12,9 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 client.once('ready', () => {
     console.log('ShadowWolf išlindo iš miško!');
 });
-
+client.on('messageCreate', (message) => {
+  if (message.content === '!ping') {
+    message.reply('Pong! Aš gyvas, brolau!');
+  }
+});
 client.login(process.env.BOT_TOKEN);
